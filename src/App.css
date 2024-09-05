@@ -1,20 +1,16 @@
+/* App.css */
+
+body {
+  background-color: #040404;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
-  background-color: #282c34;
+  position: relative;
+  background-color: #040404;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -24,15 +20,46 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.exposition {
+  position: relative;
+  border: 10px solid #caab6d;
+  border-radius: 2%;
+  background-image: url('./images/banesepia.png');
+  margin: 0 auto;
+  overflow: hidden;
+  background-size: contain;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+
+.exhibitor-button {
+  position: absolute;
+  border: none;
+  cursor: pointer;
+  pointer-events: auto;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  opacity: 0.9;
+  transition: transform 0.2s ease;
+}
+
+.exhibitor-button:hover {
+  opacity: 1;
+  transform: scale(2.1);
+  color: black;
+  top: 20;
+  z-index: 10;
+}
+
+.exhibitor-modal {
+  position: fixed;
+  background-color: white;
+  padding: 10px;
+  border: 2px solid #caab6d;
+  border-radius: 5px;
+  z-index: 1000;
+  pointer-events: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
